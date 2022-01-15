@@ -5,8 +5,6 @@
 // default => 1000
 
 function calculateSalary(role) {
-    // let rolePrompt;
-    // rolePrompt = prompt("Inserisci ruolo", role);
     if (role === "ceo") {
         alert(role +  "'s salary is 2200€");
 
@@ -20,7 +18,6 @@ function calculateSalary(role) {
        alert(role + "'s salary is 1000€");
     
     }
-
 
 }
 
