@@ -8,7 +8,7 @@ class BankAccount {
   deposit(amount) {
     // throw an exception if amount is negative
     if (amount < 0) {
-      throw new SyntaxError(
+      throw new Error(
         "Errore: non è possibile depositare un ammontare negativo!"
       );
     } else {
@@ -19,7 +19,7 @@ class BankAccount {
   withdraw(amount) {
     // throw an exception if amount is negative or if withdrawal amount is greater than current amount
     if (amount < 0 || amount > this.#amount) {
-      throw new SyntaxError(
+      throw new Error(
         "Errore: è impossibile ritirare un ammontare negativo o un ammontare maggiore di ciò che è presente nel conto"
       );
     } else {
