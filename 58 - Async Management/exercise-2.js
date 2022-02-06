@@ -22,7 +22,7 @@ const persons = [
 function fetchPersonById(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (id <= 3) {
+      if (id <= 3 && id > 0) {
         resolve(persons.find((item) => item.id === id));
       } else {
         reject(new Error("Id non presente nella lista"));
@@ -31,4 +31,4 @@ function fetchPersonById(id) {
   });
 }
 
-fetchPersonById(2).then((person) => console.log(person));
+fetchPersonById(0).then((person) => console.log(person));
