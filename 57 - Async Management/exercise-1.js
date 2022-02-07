@@ -23,7 +23,7 @@ function fetchPersonById(id) {
   // code here
   return new Promise((resolve, reject) =>
     setTimeout(() => {
-      resolve(persons.filter((persons) => persons.id === id));
+      resolve(persons.find((persons) => persons.id === id)); 
     }, 1000)
   );
 }
