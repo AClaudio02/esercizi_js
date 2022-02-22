@@ -1,0 +1,44 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  function initForm() {
+    const personForm = document.querySelector("#person-form");
+    for (let i = 0; i < 3; i++) {
+      const inputEl = document.createElement("input");
+      let text = "firstName";
+      inputEl.classList.add("name");
+      if (i === 1) {
+        text = "lastName";
+      } else if (i === 2) {
+        text = "age";
+      }
+      inputEl.placeholder = text;
+      inputEl.classList = text;
+      personForm.append(inputEl);
+    }
+  }
+  function submitPersonForm() {
+    event.preventDefault();
+    const firstName = document.querySelector(".firstName").value;
+    const lastName = document.querySelector(".lastName").value;
+    const age = document.querySelector(".age").value;
+    const person = {
+      firstName,
+      lastName,
+      age,
+    };
+    console.log(person);
+  }
+  initForm();
+  const submitBtn = document.querySelector("button");
+  submitBtn.addEventListener("click", submitPersonForm);
+</script>
